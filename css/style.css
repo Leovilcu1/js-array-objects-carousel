@@ -75,8 +75,8 @@ main{
     display: inline-block;
     text-align: center;
     cursor: pointer;
-    right: 10%;
-    transform: translateX(-50%);
+    right: 15%;
+    transform: translateX(50%);
     transition: all .2s ease-in-out;
 }
 .controls > span:hover{  
