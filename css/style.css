@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    width: 80%;
+    height: 60%;
+    background-color: red;
+    display: flex;
+    position: relative;
+}
+.slider .slides{
+    width: 70%;
+    height: 100%;
+    background-color: green;
+}
+.slider .slides .slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+.slider .slides .slide.active{
+    display: block;
+}
+.slider .slides .slide .texts{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    width: 100%;
+    color: white ;
+    background-color: rgba(0, 0, 0, .4);
+}
+.slider .slides .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.slider .thumbnails{
+    width: 30%;
+    height: 100%;
+}
+.slider .thumbnails .thumbnail{
+    height: 1%;
+    width: 100%;
+    filter: brightness(40%);
+    cursor: pointer;
+}
+.slider .thumbnails .thumbnail.active{
+    filter: brightness(100%);
+    border: 4px solid white;
+}
+.slider .thumbnails .thumbnail img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.controls > span {  
+    position: absolute; 
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color:rgba(255, 255,255,.4);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    right: 10%;
+    transform: translateX(-50%);
+    transition: all .2s ease-in-out;
+}
+.controls > span:hover{  
+    background-color:rgba(255, 255,255,1);
+}
+.prev{
+    top: 10px;
+}
+.next{
+    bottom: 10px;
+}
